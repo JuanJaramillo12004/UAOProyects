@@ -1,5 +1,5 @@
 import random
-#hola
+
 longitud = int(input("Longitud de la palabra: "))
 caracteres = "abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 palabra = ""
