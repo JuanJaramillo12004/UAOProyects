@@ -1,0 +1,134 @@
+body{
+	display: flex;
+	cursor: url("Images/cursor.cur"), auto;
+	background-image: url(Images/fondo.jpg);
+	background-repeat: no-repeat;
+	background-width: 100%;
+	background-height: 100%;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-color: aqua;
+	position: relative;
+	font-family: "Fonts/NORDIC__0.TTF"
+}
+
+
+.Logo{ 
+	position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 180px;
+    height: 90px;
+    box-shadow: 5px 5px 5px #222;
+    border-radius: 12px;
+}
+
+h1{
+	color: #326B87;
+	text-shadow: 0.08cm 0.08cm #90AFC5;
+	background-color: #07575B;
+	padding: 10px;
+	text-align: center;
+	font-family: nordic;
+	margin-top: auto;
+	margin-bottom: 40px;
+	border-radius: 20px;
+	box-shadow: 8px 8px 25px #222 inset;
+	font-size: 40px;
+}
+.contenedor{
+	margin: auto;
+	width: 80%;
+	max-width: 1000px;
+	background-color: ; opacity: 0.9;
+	border-radius: 25px;
+}
+
+header{
+	margin: 20px 0px;
+	margin: auto;
+	width: 100%;
+}
+
+.main{
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	background: #81F7D8;
+	border-radius: 20px;
+	box-shadow: 8px 8px 25px #222 inset;
+	padding: 10px 40px;
+}
+
+a{
+	text-decoration: none;
+	background-color: #07575B;
+	font-size: 20px;
+	font-family: nordic;
+	color: aqua;
+	padding: 22px;
+	border: 5px outset gray;
+	border-radius: 0 0 15px 15px;
+	margin-right: 5px;
+	margin-left: auto;
+	margin-top: 20px;
+	text-shadow: 0.05cm 0.05cm #90AFC5;
+	box-shadow: 5px 5px 5px #999;
+	width: 33.33%;
+}
+a:hover{ 
+			background: #81F7D8;
+			color: black;
+			padding: 27px;
+			font-size: 21px;
+			border: 8px outset gray;
+
+		}
+strong{
+	font-size: 40px;
+	margin-left: 10px;
+}
+h2{
+	font-size: 20px;
+	font-family: arial;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+  
+.redes{
+	text-decoration: none;
+	background-color: white;
+	font-size: 18px;
+	font-family: Times New Roman;
+	color: black;
+	padding: 14px;
+	border: 5px outset gray;
+	border-radius: 10px 10px 10px 10px;
+	margin-left: 5px;
+	text-shadow: 0.05cm 0.05cm #90AFC5;
+	box-shadow: 5px 5px 5px #999;
+}
+
+h6{
+	font-family: Times New Roman;
+	text-shadow: 0.05cm 0.05cm #90AFC5;
+	color: black;
+	font-size: 18px;
+	background-color: white;
+	padding: 14px;
+	border: 5px outset gray;
+	border-radius: 10px 10px 10px 10px;
+	margin-left: 5px;
+	box-shadow: 5px 5px 5px #999;
+	display: inline-block;
+	text-decoration: none;
+}
+h5{
+	font-family: Times New Roman;
+	text-shadow: 0.05cm 0.05cm #90AFC5;
+	color: black;
+	font-size: 18px;
+	display: inline-block;
+	margin-left: 10px;
+	text-decoration: none;
+}

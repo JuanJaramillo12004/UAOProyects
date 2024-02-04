@@ -1,0 +1,5 @@
+Profesor Cesar.
+Antes de abrir el archivo index o cualquier otro por
+favor debe instalar la fuente Nordic que se 
+encuentra en la carpeta Fonts. Sin esa fuente la 
+pagina tendra un cambio en muchas cosas.
