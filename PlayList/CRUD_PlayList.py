@@ -2,6 +2,8 @@
 
 class Playlist:
 
+    numQueries = 0
+
     def __init__(self) -> None:
         self.playlist = []
 
@@ -14,3 +16,11 @@ class Playlist:
                 self.playlist.append(record)
             
         print(self.playlist)
+
+    def filterPlaylist(this, key, value):
+        filteredList = list(filter( lambda x: x[key] == value, this.playlist ))
+        print(filteredList)
+
+    def filterPlaylist2(this, key, value):
+        filteredPlaylist = [ f for f in this.playlist if f[key] == value ]
+        print(filteredPlaylist)
