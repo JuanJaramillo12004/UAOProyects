@@ -6,14 +6,16 @@ MiBook.loadDataFromCSV(file)
 
 opcion = int(input("Cómo quiere filtrar? \n1=Lambda ó 2=List Comprehension: "))
 
-dato = int(input("""Dato por el que desea filtrar 
+
+
+if(opcion == 1):
+    
+    dato = int(input("""Dato por el que desea filtrar 
 1. Artistas 
 2. Titulo
 3. Año
 
 Digite 1,2 ó 3: """))
-
-if(opcion == 1):
     
     if(dato == 1):
         filtro = input(f"Ingrese el artista que quiere filtrar: ")
@@ -29,6 +31,13 @@ if(opcion == 1):
         
 elif(opcion == 2):
     
+    dato = int(input("""Dato por el que desea filtrar 
+1. Artistas 
+2. Titulo
+3. Año
+
+Digite 1,2 ó 3: """))
+    
     if(dato == 1):
         filtro = input(f"Ingrese el artista que quiere filtrar: ")
         MiBook.filterBooks2("artists",filtro)
@@ -40,6 +49,7 @@ elif(opcion == 2):
     else:
         filtro = input(f"Ingrese el año que quiere filtrar: ")
         MiBook.filterBooks2("year",filtro)
+        
 else:
     print("Opción incorrecta")
 
