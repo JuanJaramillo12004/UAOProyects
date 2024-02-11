@@ -12,8 +12,7 @@ class Books:
                 values = line.split(sep=';')
                 record = {"artists":values[0], "title":values[1], "year":values[2], "numPages":values[3]}
                 self.books.append(record)
-            
-        print(self.books)
+                print(f"{record['artists']};{record['title']};{record['year']};{record['numPages']}")
 
     def filterBooks(this, key, value):
         filteredBook = list(filter( lambda x: x[key] == value, this.books ))

@@ -4,7 +4,9 @@ file = r'.\Books\Data.csv'
 MiBook = Books()
 MiBook.loadDataFromCSV(file)
 
-opcion = int(input("Cómo quiere filtrar? \n1=Lambda ó 2=List Comprehension: "))
+opcion = int(input("""----------------------------------------
+Cómo quiere filtrar? 
+1=Lambda ó 2=List Comprehension: """))
 
 
 
