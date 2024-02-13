@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalito para Caro</title>
+    <style>
+        header {
+            height: 160px;
+            display: flex; 
+            justify-content: space-around;
+            
+        }
+
+        img{
+            border-radius: 10px;
+
+        }
+        body{
+            background-color: #666666;
+            background-image: url('fondo.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-shadow: 2px 1px 2px rgba(111, 109, 109, 0.8);
+            color: #521146;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            word-spacing: 1px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: none;
+        }
+
+        iframe{
+            width: 200px;
+            height: 350px;
+            border-radius: 20px;
+            position: center;
+        }
+        .contenedor {
+            display: flex; 
+            align-items: center; 
+        }
+
+        .contenedor iframe {
+            margin-right: 20px; 
+        }
+        p{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .boton{
+            background-color: #ff6b6b; 
+            color: white; 
+            padding: 10px 20px; 
+            font-size: 20px; 
+            border: none; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            position: relative;
+            overflow: hidden;
+            padding: 10px 20px;
+        }
+
+        .boton::before {
+            content: "\2665"; 
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); /* Centra el corazón */
+            font-size: 30px; 
+            opacity: 0.7;
+        }
+
+        .boton:hover::before {
+            transform: translate(-50%, -50%) scale(1.2); 
+            opacity: 1; 
+        }
+        .alerta {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .alerta p {
+            margin: 0;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="foto.jpeg" alt="Foto 1">        
+        <h1>🐿️¡¡HOLA ARDILLITA HERMOSA!!🐿️</h1>
+        <img src="foto1.jpeg" alt="Foto 2">  
+    </header>
+    <nav>
+        
+    </nav>   
+    <main>
+        <div class="contenedor">
+            <p>Hola Mi Niña!!
+                <br>Espero en este momento estes muy bien.
+                <br><br>Quiero decirte algo... GRACIAS, ¿Por qué diras?
+                <br>En este poco tiempo que llevamos conociendonos, te has vuelto
+                <br>demasiado importante para mi y creo que hasta el momento
+                <br>nos hemos entendido, y aceptamos lo que conocemos del otro,
+                <br>por esto y mucho más.
+                <br><br><strong>🍉TE QUIERO MUCHOOOOOOO MI WATERMELON🍉</strong>
+                <br>Ahora mira el videito que hice hace dias y un poema gonito.
+            </p>
+            <iframe src="video.mp4" frameborder="0" allowfullscreen></iframe>
+            <p><em>Podrá nublarse el sol eternamente;
+                <br>podrá secarse en un instante el mar:
+                <br>podrá romperse el eje de la tierra
+                <br>como un débil cristal.
+                
+                <br><br>¡Todo sucederá! Podrá la muerte
+                <br>cubrirme con su fúnebre crespón,
+                <br>pero jamás en mí podrá apagarse
+                <br>la llama de tu amor.</em></p>
+        </div>
+    </main>
+    <footer>
+        <p>¡¡Feliz San Valentine Mi Vida!!
+        <br>PD: Me estas cambiando mi mundo!!</p>
+        <button class="boton" onclick="mostrarAlerta()">❤️</button>
+        <div class="alerta" id="miAlerta">
+            <span class="cerrar" onclick="cerrarAlerta()">&times;</span>
+            <p><em>¡PRECIOSAAAAA!</em></p>
+        </div>
+        <script>
+            function mostrarAlerta() {
+                var alerta = document.getElementById('miAlerta');
+                alerta.style.display = 'block';
+            }
+
+            function cerrarAlerta() {
+                var alerta = document.getElementById('miAlerta');
+                alerta.style.display = 'none';
+            }
+
+        </script>
+</body>
+    </footer>
+</body>
+</html>
