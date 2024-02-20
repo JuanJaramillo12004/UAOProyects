@@ -1,5 +1,11 @@
-function calcularCuotaMensual(prestamo, interes, meses) {
-    return (prestamo * ((Math.pow(1+interes,meses) * interes) / (Math.pow(1+interes,meses) - 1)));
+function calcularCuotaMensual(pres, month) {
+    const inte = 0.1;
+    return (pres * ((Math.pow(1+inte,month) * inte) / (Math.pow(1+inte,month) - 1)));
 }
 
-export {calcularCuotaMensual};
+function filtroOpcion(valor){
+    const cadena = "El filtro seleccionado es la " + valor;
+    return cadena;        
+}
+
+export {calcularCuotaMensual, filtroOpcion}

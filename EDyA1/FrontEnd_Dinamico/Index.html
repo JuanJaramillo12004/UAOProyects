@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="Scripts/main.js" type="module"></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="coloreado">
+                <h1 id="definicion">Frontend Dinamico</h1>
+                <p><strong>Recordar:</strong>HTML y CSS son lenguajes estáticos que no
+                    permiten añadir elementos que interactúen con otros más allá del uso de enlaces. Usar JavaScript en
+                    el diseño de una web permite
+                    añadir botones interactivos, formularios y animaciones.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h1>Componentes interactivos</h1>
+            <table>
+                <caption>Ejemplos de componentes interactivos</caption>
+                <thead>
+                    <tr>
+                        <th>Componente(s)</th>
+                        <th>Evento asociado</th>
+                        <th>Interación</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Ejemplos Mostrados</th>
+                        <th>5</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Botón<br>
+                            prompt<br>
+                            textArea
+                        </td>
+                        <td>
+                            <strong><em>click</em></strong>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Obtención nombre y calculo IMC</legend>
+                                <label> Para calcular su <strong>IMC</strong>:</label>
+                                <button id="consultaBoton">Pulsar aquí</button><br>
+                                <br>
+                                <label> Salida</label>
+                                <textarea id="salidaIMC" rows="5" cols="50" readonly>El nombre leido fue ....</textarea>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Botón y <strong>captura</strong> de entradas tipo: <br>
+                            texto<br>
+                            numerico<br>
+                            fecha<br>
+                            rango
+                        </td>
+                        <td>
+                            <strong><em>click</em></strong>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Obtención datos desde inputs: text, numbre, date y range</legend>
+                                <label>Indique nombre</label><input type="text" value="digite nombre" name=""
+                                    id="consultaNombre"><br><br>
+                                <label>Indique edad [12,59] </label><input type="number" value="25" name=""
+                                    id="consultaEdad" min="12" max="59"> <br><br>
+                                <label>Para captura los datos </label><button id="consultaBoton2">Pulsar aquí</button>
+                                <br><br>
+                                <h1 id="mostrarBoton2">Los datos leidos son: </h1>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Casilla de verificación<br>
+                            Alert
+                        </td>
+                        <td>
+                            <strong><em>change</em></strong>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Obtención datos desde checkbox</legend>
+                                <label>Pulsar en caso afirmativo</label>
+                                <input type="checkbox" name="" id="consultaCheck">Te gusta el desarrollo Web ?<br>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colección de botones de radio<br>
+                            Alert
+                        </td>
+                        <td>
+                            <strong><em>change</em></strong>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Obtención datos desde radio buttons</legend>
+                                <label>Indique su materia preferida</label><br>
+                                <input type="radio" value="Estuctura Datos" name="materias" id="materia1"
+                                    checked>EDyA1<br>
+                                <input type="radio" value="Bases de Datos" name="materias" id="materia2">BD<br>
+                                <input type="radio" value="Programacion Orientada a Objetos" name="materias"
+                                    id="materia3">POO<br>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Menu de opciones<br>
+                            Alert
+                        </td>
+                        <td>
+                            <strong><em>change</em></strong>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Obtención datos desde menu de opciones</legend>
+                                <label>Indique su materia preferida</label>
+                                <select name="materias2" id="listaMaterias">
+                                    <!-- Opciones de la lista -->
+                                    <option value="Estuctura Datos" selected>EDyA1</option><!-- Opción por defecto -->
+                                    <option value="Bases de Datos">BD</option>
+                                    <option value="Programacion Orientada a Objetos">POO</option>
+                                </select>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="coloreado">
+            <p> <small>Creado por el profesor Orlando Arboleda, para el curso de EDyA1 en el Universidad Autónomoa de
+                Occidente</small> </p>
+        </div>
+    </footer>
+</body>
+
+</html>

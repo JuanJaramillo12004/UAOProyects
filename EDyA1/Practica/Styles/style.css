@@ -1,7 +1,38 @@
-article {
-    position: absolute;
+article{
+    position: relative;
 }
+
 label {
-    padding-right: 10px;
-    position: ;    
+    padding: 10px;
+    margin: 10px;    
+}
+
+input{
+    margin: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+legend{
+    text-align: center;
+}
+
+button{
+    margin-left: 10px;
+
+    width: 30vh;
+}
+
+select{
+    margin: 10px;
 }
