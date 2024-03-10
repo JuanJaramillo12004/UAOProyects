@@ -1,0 +1,227 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ajustar para invocar los archivos default.css e index.js-->
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/index.js" type="module"></script>
+    <title>Practica EDyA1 - Corte 1</title>
+    <link href="css.styles.css" rel="stylesheet" type="text/css">
+    <link href="js.scripts.js" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <img src="Images/Logo-50-años.png" alt="Logo 50 años">        
+        <h1>Practica EDyA1 - Corte 1</h1>
+    </header>
+    <main>
+        <section>
+            <p><strong>OBSERVACIÓN:</strong>Para el examen, cada estudiante puede emplear sus apuntes de clase, NO es permitido el uso de fotocopias, impresiones adicionales ni teléfonos móviles. El intercambio de cualquier elemento entre estudiantes puede dar lugar a anulación del examen. </p>
+            <table>
+                <caption>Computo Prestamos Máximos a Asociados</caption>  
+                <tr>
+                    <td>Asociado</td>
+                    <td>
+                        <input type="text" value="Marcos Balanta" id="elAsociado">
+                    </td>
+                </tr>  
+                <tr>
+                    <td>Valor Aportes $</td>
+                    <td>
+                        <input type="text" value="5000000" id="losAportes">
+                    </td>
+                </tr> 
+                <tr>
+                    <td>Tipo Prestamo</td>
+                    <td>
+                        <select id="elTipoPrestamo">
+                            <option value="Libre inversion" selected>Libre inversion</option><!-- Opción por defecto -->
+                            <option value="Educacion">Educacion</option> 
+                            <option value="Vivienda">Vivienda</option> 
+                        </select>  
+                    </td>
+                </tr>                           
+            </table><br>
+            <textarea id="laRespuesta" cols="50" rows="3"></textarea><br>
+            <button id="ejecutar">Pulsar</button> <hr>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por el profesor Orlando Arboleda Molina, para el curso de EDyA1 en el Universidad Autónoma de Occidente</p>
+    </footer>
+</body>
+</html>
+
+CSS
+body {
+    background-color:lightblue;
+    font-size: 25 px;
+    text-align:center;
+}
+table { 
+    border: 1 px solid;
+    margin: auto;
+    padding: 10 px 25 px;
+    border-radius: 8 px;
+}
+textArea { 
+    font-size: 20 px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+JAVASCRIPT
+Frontend Index.js
+const misFunciones = require('./scripts/utils')
+
+// importa a express y cors
+const express = require('express')
+const cors = require('cors')
+
+// crea aplicación usando express y puerto
+const app = express()
+const port = 1234
+
+//#region 
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+)
+
+app.use(
+  express.json({
+    type: "*/*"
+  })
+)
+
+app.use(cors());
+//#endregion
+
+// Routes
+// Ajustar ruta
+app.get('/praticaCalificable1', (req, res) => {
+  // obtener pagina web con el valor pagado por IVA para un valor total pagado de 2000 y regresarla al usuario (con el método send)
+  const paginaWeb = misFunciones.obtenerPaginaIVA(4000000);
+  res.send(paginaWeb);
+})
+ 
+// Ajustar ruta
+app.post('/practicaCalificable1', (req, res) => {
+  const {elValor} = req.body;
+  const valorTotal = parseInt(elValor);
+  const paginaWeb = misFunciones.obtenerPaginaIVA(valorTotal);
+
+  res.send(paginaWeb);
+  // asignar en la variable valorTotal, la cantidad suministrada desde el formulario del cliente web, 
+  // obtener pagina web con el valor pagado por IVA para la cantidad asignada en valorTotal y regresarla al usuario (con el método send)
+})
+
+// se pone en escucha y despliega el primer mensaje
+app.listen(port, () => {
+  console.log('Servidor en ejecución');
+})
+
+Backend Index.js
+//import { create } from 'domain';
+//import objectAssign from 'object-assign';
+import {calcularPrestamoMaximo} from './computos.js';
+
+// obtiene boton
+const boton = document.getElementById("ejecutar");
+
+// addEventListener a la referencia boton para que cuando se dé el evento click 
+// se ejecute la función procesarEntrada
+boton.addEventListener('click',procesarEntrada)
+
+function procesarEntrada(){
+    // capturar los datos proporcionados desde la página web
+    const asociado = document.getElementById("elAsociado").value;
+    const aportes = parseInt(document.getElementById("losAportes").value);
+    const tipoPrestamo = document.getElementById("elTipoPrestamo").value;
+
+    // calcular el préstamo máximo que tendría un asociado
+    const prestamoMaximo = calcularPrestamoMaximo(aportes, tipoPrestamo);
+
+    // desplegar la salida en el área de texto presentada en la GUI.
+    if (prestamoMaximo !== 0){
+        document.getElementById("laRespuesta").value = `${asociado} tiene aportes de ${aportes}, se le presta maximo ${prestamoMaximo} para ${tipoPrestamo}`;
+    } else {
+        document.getElementById("laRespuesta").value = "No se puede calcular el prestamo maximo";
+    }
+
+    // crear un objeto con las siguientes propiedades: asociado, aportes,  tipoPrestamo y prestamoMaximo
+    // y almacenarlo al inicio de la lista infoPrestamos
+    const prestamo = {
+        asociado: asociado,
+        aporte: aportes,
+        tipoPrestamo: tipoPrestamo,
+        prestamoMaximo: prestamoMaximo
+    };
+
+    let infoPrestamos = [prestamo];
+    
+    // desplegar por consola el arreglo infoPrestamos
+    console.log(infoPrestamos) 
+}
+
+utils.js
+function obtenerPaginaIVA(valor){
+	// Calcular el valor correspondiente al IVA, truncarlo y asignarlo a la variable respuesta
+	const iva = valorTotal* 0.19;
+	const respuesta = Math.trunc(iva)
+
+	
+	const nPage = '<!DOCTYPE html>'+
+		'<head>'+
+		'    <title>Practica Calificable Corte1 - Grupo 1</title>'+
+		'</head>'+
+		'<body>'+
+		'    <main>'+ 
+		'        <h1>Computo del Valor Pagado por IVA</h1>'+
+		'        <form action="/practicaCalificable1" enctype="application/x-www-form-urlencoded" method="post">'+
+		'            Valor Total Pagado $ '+
+		'            <input type="text" value="'+valor+'" name="elValor">'+
+		'			<input type="submit"  value="Calcular">'+
+		'        </form><br>'+
+		'		<textarea cols="35" rows="2">El IVA pagado fue de $ '+respuesta+'</textarea><br>'+
+		'        <hr>'+   
+		'    </main>'+
+		'    <footer>'+
+		'        <p> <small>Fuente propia para el curso de Estructura de Datos 1 en la Universidad Autónoma de Occidente</small> </p>'+
+		'    </footer>'+
+		'</body>'
+    return nPage;	
+}
+
+// se indican las funciones a importar
+module.exports = {obtenerPaginaIVA};
+
+computos.js
+// Adicionar funcion calcularPrestamoMaximo(aportes, tipoPrestamo)
+function calcularPrestamoMaximo(aportes, tipoPrestamo){
+    let porcentajeMaximo = 0;
+    
+    //Determinar el porcentaje maximo segun el tipo de prestamo
+    switch(tipoPrestamo){
+        case "Libre inversion":
+            porcentajeMaximo = 0.80
+            break;
+        case "Educacion":
+            porcentajeMaximo = 0.905
+            break;
+        case "Vivienda":
+            porcentajeMaximo = 0.955
+            break;
+        default:
+            console.log("Tipo de prestamo no valido")
+            return 0
+    }
+
+    //Calcular el prestamo maximo
+    const prestamoMaximo = aportes * porcentajeMaximo;
+    return prestamoMaximo;
+}
+export {calcularPrestamoMaximo};

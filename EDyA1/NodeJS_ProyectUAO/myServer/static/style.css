@@ -1,0 +1,18 @@
+body {
+    background-color: lightcyan;
+    align-content: center;
+}
+
+table {
+    border: 2px solid;
+    text-align: center;
+}
+
+th, td, tr {
+    border: 1px solid;
+}
+
+textarea{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration:underline;
+}

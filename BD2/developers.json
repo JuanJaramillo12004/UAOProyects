@@ -1,8 +1,0 @@
-{   
-    "developers":[
-        {"id":"1","name":"Juan", "rol":"owner", "level":1},
-        {"id":"2","name":"Nicolas", "rol":"designer", "level":2},
-        {"id":"3","name":"Carlos", "rol":"programmer", "level":2},
-        {"id":"4","name":"Baljeet", "rol":"programmer", "level":2}
-    ]    
-}

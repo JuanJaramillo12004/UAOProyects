@@ -1,0 +1,22 @@
+{
+    "tasks":[
+        {"titulo": "Diseñar bd", "description":"diagrama er/diaframa lr", 
+        "status": "ToDo", "perc":100, "optional": false, "bonus":0.1,
+        "developers":[{"id":333 },
+                        {"id":222}]
+        },
+
+        {"titulo": "Implementar bd", "description":"noSQL", 
+        "status": "Finished", "perc":100, "optional": false, "developers":[{"id":444}]},
+
+        {"titulo": "Optimización de base de datos", "description": "Mejorar el rendimiento de consultas en la base de datos existente", 
+        "status": "ToDo", "perc":0.50, "optional": false, "developers":[{"id":555},{"id":444}]},
+
+        {"titulo": "Análisis de Requisitos", "description":"Revisar y comprender los requisitos para asegurar las pruebas", 
+        "status": "In proccess", "perc":0.85, "optional": false, "bonus":0.2,
+        "developers":[{"id":121 }]},
+
+        {"titulo": "Pruebas de Seguridad", "description":"Evaluar la seguridad", 
+        "status": "Finished", "perc":100, "optional": false, "developers":[{"id":111 }]}
+    ]
+}

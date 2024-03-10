@@ -1,0 +1,21 @@
+/* crear el selector body, table y textArea */
+body {
+    background-color:lightblue;
+    font-size: 25 px;
+    text-align:center;
+}
+
+table { 
+    border: 1 px solid;
+    margin: auto;
+    padding: 10 px 25 px;
+    border-radius: 8 px;
+}
+
+textArea { 
+    font-size: 20 px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+

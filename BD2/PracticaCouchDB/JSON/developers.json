@@ -1,0 +1,12 @@
+{
+    "developers":
+    [
+        {"id":111,"name":"Diego","rol":"QA Engineer","level":"Senior"},
+        {"id":222, "name":"Diana","rol":"Analista","level":"Junior"},
+        {"id":333, "name":"Nicolas","rol":"Arquitecto","level":"Semi-senior"},
+        {"id":444, "name":"Alejandro","rol":"Programador","level":"Semi-senior"},
+        {"id":555, "name":"Juan Eduardo","rol":"Programador","level":"Junior"},
+        {"id":121, "name":"Ludy","rol":"QA Engineer","level":"Senior"}
+    ]
+}
+

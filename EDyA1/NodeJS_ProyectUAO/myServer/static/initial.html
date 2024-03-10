@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejemplo Backend</title>
+    <link rel="stylesheet" href="./transactions/style.css">
+</head>
+<body>
+    <main> 
+        <h1>Almacenamiento y calculo de IMCs</h1>
+        <!– la informacion se codificarán en tuplas clave=valor separadas por '&' –>
+        <form action="/transactions" enctype="application/x-www-form-urlencoded" method="post">
+            <table>
+                <caption>Calculadora Online</caption>
+                <tbody>
+                    <tr>
+                        <td>Peso</td>
+                        <td><input type="text" value="60.5" name="peso" required></td>
+                    </tr>
+                    <tr>
+                        <td>Estatura</td>
+                        <td> <input type="text" value="1.7" name="estatura" required></td>
+                    </tr>                
+                    <tr>
+                        <td>Acción:</td> 
+                        <td>   
+                            <input type="radio" value="Calcular" name="accion" checked>IMC
+                            </label><input type="radio" value="Historial" name="accion">Historial          
+                        </td>
+                    </tr>      
+                    <tr>
+                        <td colspan="2"><input type="submit"  value="Enviar"></td>              
+                    </tr>                                 
+                </tbody>
+            </table>                          
+        </form>
+        <hr>   
+    </main>
+    <footer>
+        <p> <small>Fuente propia para el curso de Estructura de Datos 1 en la Universidad Autónoma de Occidente</small> </p>
+    </footer>
+</body>
+</html>

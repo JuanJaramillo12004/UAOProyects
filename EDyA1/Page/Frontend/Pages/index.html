@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Cuota Mensual</title>
+    <link rel="stylesheet" href="../calculaCuota/styles/style.css">
+</head>
+<body>
+    <main>
+        <form action="/calculaCuota" enctype="application/x-www-form-urlencoded" method="post">
+            <section>
+                <div>
+                    <h1 id="TituloP">Prestamo Feliz</h1>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <fieldset>
+                        <legend>Datos para su prestamo</legend>
+                        <label>Nombre </label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label>Prestamo </label>
+                        <input type="text" id="prestamo" name="prestamo">
+                        <label>Meses </label>
+                        <input type="text" id="meses" name="meses">
+                        <label>Interes</label>
+                        <input type="text" id="interes" name="interes">
+                        <label>Resultado</label>
+                        <textarea id="cajaResultado" cols="100" rows="10" readonly>Info: </textarea>
+                        <input type="submit"  value="Evaluar" name="accion"><br>
+                    </fieldset>
+                </div>
+            </section>
+        </form>
+    </main>
+</body>
+</html>

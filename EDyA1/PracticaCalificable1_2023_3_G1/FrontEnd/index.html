@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ajustar para invocar los archivos default.css e index.js-->
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/index.js" type="module"></script>
+    <title>Practica EDyA1 - Corte 1</title>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo-50-años.png" alt="Logo 50 años">        
+        <h1>Practica EDyA1 - Corte 1</h1>
+    </header>
+    <main>
+        <form action="/practicaCalificable1" enctype="application/x-www-form-urlencoded" method="post">
+        <section>
+            <p><strong>OBSERVACIÓN:</strong>Para el examen, cada estudiante puede emplear sus apuntes de clase, NO es permitido el uso de fotocopias, impresiones adicionales ni teléfonos móviles. El intercambio de cualquier elemento entre estudiantes puede dar lugar a anulación del examen. </p>
+            <table>
+                <caption>Computo Prestamos Máximos a Asociados</caption>  
+                <tr>
+                    <td>Asociado</td>
+                    <td>
+                        <input type="text" value="Marcos Balanta" id="elAsociado">
+                    </td>
+                </tr>  
+                <tr>
+                    <td>Valor Aportes $</td>
+                    <td>
+                        <input type="text" value="5000000" id="losAportes">
+                    </td>
+                </tr> 
+                <tr>
+                    <td>Tipo Prestamo</td>
+                    <td>
+                        <select id="elTipoPrestamo">
+                            <option value="Libre inversion" selected>Libre inversion</option><!-- Opción por defecto -->
+                            <option value="Educacion">Educacion</option> 
+                            <option value="Vivienda">Vivienda</option> 
+                        </select>  
+                    </td>
+                </tr>                           
+            </table><br>
+            <textarea id="laRespuesta" cols="50" rows="3"></textarea><br>
+            <button id="ejecutar">Pulsar</button> <hr>
+        </section>
+        </form>
+    </main>
+    <footer>
+        <p>Creado por el profesor Orlando Arboleda Molina, para el curso de EDyA1 en el Universidad Autónoma de Occidente</p>
+    </footer>
+</body>
+</html>

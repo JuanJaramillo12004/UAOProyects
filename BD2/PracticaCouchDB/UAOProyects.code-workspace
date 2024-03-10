@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "UAOProyects",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Pagina web"
+	}
+}
