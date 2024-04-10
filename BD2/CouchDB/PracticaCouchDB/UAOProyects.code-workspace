@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "UAOProyects",
+			"path": "../.."
+		},
+		{
+			"name": "ProyectoBD2-2",
+			"path": "../../../ProyectoBD2-2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "UAOProyects"
+	}
+}

@@ -1,0 +1,48 @@
+body{
+    background-color:lightblue;
+    font-size: 25px;
+    text-align: center;
+}
+
+header {
+    height: 120px;
+    display: flex; 
+    justify-content: space-around;
+}
+
+table,td{
+    border:1px solid;
+    margin: auto;
+    padding: 5px 10px;
+	border-radius: 8px;
+}
+
+textArea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+fieldset{
+    width:770px;
+    height:300px;
+    padding: 5px 5px;
+    background-color:#EEE8AA;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

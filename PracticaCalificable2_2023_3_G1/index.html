@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="Scripts/main.js" type="module"></script>
+	<title>Practica EDyA1 - Corte 2_G1</title>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo-50-años.png" alt="Logo 50 años"> 
+        <h1>Practica Calificable EDyA1 - Corte 2_G1</h1>       
+    </header>
+    <main>
+        <section>
+            <table>
+                <caption>Aplicativo para gestionar ingenieros</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2">Atributo</th>
+                        <th >Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Cedula Ingeniero</td>
+                        <td>
+                            <input type="text" value="95230000"  id="laCedula">                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Nombre</td>
+                        <td>
+                            <input type="text" value="Victoria Carranza Ruiz" id="elNombre">                           
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="2">Salario $</td>
+                        <td>
+                            <input type="text" value="5800000.5" id="elSalario">                           
+                        </td>
+                    </tr>                  
+                    <tr>
+                        <td rowspan="3">Tarjeta Profesional</td>
+                        <td>NumeroMatricula</td>
+                        <td>
+                            <input type="text" value="23456" id="laMatricula">                           
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Carrera</td>
+                        <td>
+                            <input type="text" value="Ing. Informatica"  id="laCarrera">                            
+                        </td>
+                    </tr>                 
+                    <tr>
+                        <td>Universidad</td>
+                        <td>
+                            <select id="laUniversidad">
+                                <option value="Autonoma" selected>Autonoma</option><!-- Opción por defecto -->
+                                <option value="Univalle">Univalle</option> 
+                                <option value="Javeriana">Javeriana</option>
+                                <option value="ICESI">ICESI</option>                                                                                    
+                            </select>                                               
+                        </td>
+                    </tr>                                          
+                </tbody>
+            </table>
+            <fieldset>
+                <legend>Funcionalidades</legend> 
+                <button id="ingresar">Ingresar Ingeniero</button><button id="consultar">Ver reporte por Universidad</button><br><br>
+                <textarea id="respuesta" cols="70" rows="9" readonly>....</textarea>   
+            </fieldset><hr>      
+        </section>    
+    </main>
+    <footer>
+        <p>Creado por el profesor Orlando Arboleda, para el curso de EDyA1 en el Universidad Autónoma de Occidente</p>
+    </footer>
+</body>
+</html>

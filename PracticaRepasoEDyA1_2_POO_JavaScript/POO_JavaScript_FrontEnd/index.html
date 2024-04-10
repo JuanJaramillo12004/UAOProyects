@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiempo libre de las personas</title>
+    <link rel="stylesheet" href="Styles/style.css" />
+    <script defer src="Scripts/UsaPersona.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <table>
+        <caption>
+          Práctica de Repaso POO en JavaScript
+        </caption>
+        <thead>
+          <tr>
+            <th colspan="2">Atributo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">Nombre</td>
+            <td>
+              <input
+                type="text"
+                placeholder="ABC 215"
+                name=""
+                id="elNombre"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Edad</td>
+            <td colspan="2">
+              <input
+                type="text"
+                placeholder="2020"
+                name=""
+                id="laEdad"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Cédula</td>
+            <td colspan="2">
+              <input
+                type="text"
+                id="laCedula"
+                placeholder="01.234.567.89"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Pasatiempo</td>
+            <td>
+              Nombre:
+              <input
+                id="nomPasatiempo"
+                placeholder="Futbol"
+                type="text"
+                autocomplete="Off"
+              />
+            </td>
+            <td>
+              Frecuencia
+              <input
+                id="frecPasatiempo"
+                placeholder="25 (En horas)"
+                type="text"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Tipo de persona:</td>
+            <td>
+              <select id="laOpcion">
+                <option id="elEstudiante" value="elEstudiante">
+                  Estudiante
+                </option>
+                <option id="elEmpleado" value="elEmpleado">
+                  Empleado
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Código</td>
+            <td colspan="2">
+              <input
+                type="text"
+                id="elCodigo"
+                placeholder="2226223"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Salario</td>
+            <td colspan="2">
+              <input
+                type="text"
+                id="elSalario"
+                placeholder="45000000"
+                autocomplete="Off"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <fieldset>
+        <legend>Funcionalidades</legend>
+        <button id="ingresar">Ingresar</button
+        ><button id="consultar">Consultar</button><br /><br />
+        <textarea id="salida" cols="80" rows="8" readonly>....</textarea>
+      </fieldset>
+      <hr />
+    </main>
+    <footer>
+      <p>
+        <small
+          >Creado por el profesor Orlando Arboleda, para el curso de EDyA1 en el
+          Universidad Autónomoa de Occidente</small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
