@@ -1,9 +1,7 @@
 let input = document.getElementById("inputString");
-let btnIngresar = document.getElementById("ingresar");
 let btnReporte = document.getElementById("reporte");
 let tArea = document.getElementById("respuesta");
-
-btnIngresar.addEventListener("click", function(){calcularScoreBoard(input.value);});
+document.getElementById("ingresar").addEventListener("click", function(){calcularScoreBoard(input.value);});
 
 function calcularScoreBoard(caso){
     tArea.value = "";
