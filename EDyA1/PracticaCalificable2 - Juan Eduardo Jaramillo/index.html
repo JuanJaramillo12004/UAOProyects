@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <script type="module" src="Scripts/main.js"></script>
+	<title>Practica EDyA1 - Corte 2 - 2024_1</title>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo-50-años.png" alt="Logo 50 años"> 
+        <h1>Practica Calificable EDyA1 - Corte 2_G1</h1>       
+    </header>
+    <main>
+        <section>
+            <table>
+                <caption>Aplicativo para gestionar vehiculos</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2">Atributo</th>
+                        <th >Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Placa Vehiculo</td>
+                        <td>
+                            <input type="text" value="ABC 123"  id="laPlaca">                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Modelo</td>
+                        <td>
+                            <input type="text" value="2020" id="elModelo">                           
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="2">Velocidad</td>
+                        <td>
+                            <input type="text" value="120.5" id="laVelocidad">                           
+                        </td>
+                    </tr>                  
+                    <tr>
+                        <td rowspan="3">Reparacion</td>
+                        <td>NumeroReparacion</td>
+                        <td>
+                            <input type="text" value="890002" id="elNroReparacion">                           
+                        </td>
+                    </tr>                 
+                    <tr>
+                        <td>Causa</td>
+                        <td>
+                            <select id="laCausa">
+                                <option value="Electrica" selected>Electrica</option><!-- Opción por defecto -->
+                                <option value="Mecanica">Mecanica</option> 
+                                <option value="Lamina">Lamina</option>
+                                <option value="Pintura">Pintura</option>                                                                                    
+                            </select>                                               
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Procedimiento</td>
+                        <td>
+                            <input type="text" value="Revision elevavidrios"  id="elProcedimiento">                            
+                        </td>
+                    </tr>                                                              
+                </tbody>
+            </table>
+            <fieldset>
+                <legend>Funcionalidades</legend> 
+                <button id="ingresar">Ingresar Vehiculo</button><button id="consultar">Ver reporte por Causa</button><br><br>
+                <textarea id="respuesta" cols="70" rows="7" readonly>....</textarea>   
+            </fieldset><hr>      
+        </section>    
+    </main>
+    <footer>
+        <p>Creado por el profesor Orlando Arboleda, para el curso de EDyA1 en el Universidad Autónoma de Occidente</p>
+    </footer>
+</body>
+</html>
