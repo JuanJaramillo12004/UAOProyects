@@ -13,5 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 public class CalificacionModel {
     @Id
-
+    private Integer id_calificacion;
+    private Integer id_curso;
+    private Integer calificacion;
 }
