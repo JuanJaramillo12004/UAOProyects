@@ -1,4 +1,4 @@
 package com.example.MongoBD2.service;
 
-public class UsuarioService {
+public interface UsuarioServiceImp {
 }
